@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" id="g" onclick="cbg()">Good <br>
+<input type="checkbox" id="f" onclick="cbf()">Fast<br>
+<input type="checkbox" id="c" onclick="cbc()">Cheap <br>
+<script>
+   let G = document.getElementById('g')
+   let F = document.getElementById('f')
+   let C = document.getElementById('c')
+
+   function cbg() {
+       if (F.checked && G.checked){
+           C.checked = false
+       }
+   }
+   function cbf() {
+       if (F.checked && C.checked){
+           G.checked = false
+       }
+   }
+   function cbc() {
+       if (C.checked && G.checked){
+           F.checked = false
+       }
+   }
+</script>
+</body>
+</html>
